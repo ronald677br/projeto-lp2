@@ -1,3 +1,5 @@
+package models;
+
 public class TecnicoAdministrativo extends Funcionario {
 
 	String funcao;
@@ -9,7 +11,7 @@ public class TecnicoAdministrativo extends Funcionario {
 		this.codigo = codigo;
 	}
 
-	public mostrarDados() {
+	public void mostrarDados() {
 		System.out.println("Função: " + this.funcao + " Código: " + this.codigo);
 	}
 }
