@@ -12,5 +12,4 @@ public class Funcionario {
 
     float salario;
 
-    
 }
