@@ -11,7 +11,7 @@ public class Curso {
 	public void lerDados(String nome, int codigo, String duracao) {
 		this.nome = nome;
 		this.duracao = duracao;
-		this.codigoAluno = codigo;
+		this.codigo = codigo;
 	}
 
 	public void mostrarDados() {
