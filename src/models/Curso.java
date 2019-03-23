@@ -15,9 +15,13 @@ public class Curso {
 	}
 
 	public void mostrarDados() {
+
+		System.out.println("-------Curso-------");
 		String out = "Nome: " + this.nome;
-		out += " Código: " + this.codigo;
-		out += " Duração: " + this.duracao;
+		out += " \nCódigo: " + this.codigo;
+		out += " \nDuração: " + this.duracao;
 		System.out.println(out);
+
 	}
+
 }

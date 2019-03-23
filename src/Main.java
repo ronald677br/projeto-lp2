@@ -21,12 +21,16 @@ public class Main {
 
         Professor professor = new Professor();
 
-        professor.lerDados("Gersu","Rua das Flores", "(54)3332-2222", "111.222.333-44", "00004", 15000);
+        professor.lerDados("Penaldo","Rua dos Brabo", "(54)3332-2222", "111.222.333-44", "00004", 15000, "oBrabo", "Todas");
         professor.mostrarDados();
 
         TecnicoAdministrativo tecnicoAdministrativo = new TecnicoAdministrativo();
 
-        
+        tecnicoAdministrativo.lerDados("Neymar","Rua dos Brabo", "(54)3332-2222", "111.222.333-44", "00004", 15000);
+        tecnicoAdministrativo.mostrarDados();
+
+
+
 
     }
 }

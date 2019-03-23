@@ -14,9 +14,10 @@ public class Disciplina {
 	}
 
 	public void mostrarDados() {
+		System.out.println("-------Disciplina-------");
 		String out = "Nome: " + this.nome;
-		out += " Código: " + this.codigo;
-		out += " Duração: " + this.duracao;
+		out += " \nCódigo: " + this.codigo;
+		out += " \nDuração: " + this.duracao;
 		System.out.println(out);
 	}
 }
