@@ -26,6 +26,14 @@ public class Funcionario {
         return endereco;
     }
 
+    public boolean setEndereco(String endereco) {
+        if (endereco.equals("")) {
+            return false;
+        }
+        this.endereco = endereco;
+        return true;
+    }
+
     public boolean setNome(String nome) {
         if ("".equals(nome)) {
             return false;
