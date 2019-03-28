@@ -24,4 +24,39 @@ public class Curso {
 
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public boolean setNome(String nome) {
+		if (nome.equals("")) {
+			return false;
+		}
+		this.nome = nome;
+		return true;
+	}
+
+	public String getDuracao() {
+		return duracao;
+	}
+
+	public boolean setNome(String duracao) {
+		if (duracao.equals("")) {
+			return false;
+		}
+		this.duracao= duracao;
+		return true;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public boolean setCodigo(int codigo) {
+		if (codigo < 0) {
+			return false;
+		}
+		this.codigo= codigo;
+		return true;
+	}
 }
