@@ -1,11 +1,12 @@
 package models;
 
 public class Disciplina {
-    int codigo;
 
-    String nome;
+    private int codigo;
 
-	String duracao;
+    private String nome;
+
+	private String duracao;
 
 	public void lerDados(int codigo, String nome, String duracao) {
 		this.codigo = codigo;

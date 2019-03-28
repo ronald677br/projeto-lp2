@@ -2,13 +2,13 @@ package models;
 
 public class Aluno {
 
-    String nome;
+    private String nome;
 
-    String email;
+    private String email;
 
-    String telefone;
+    private String telefone;
 
-	int codigoAluno;
+	private int codigoAluno;
 	
 	public void lerDados(String nome, String email, String telefone, int codigoAluno) {
 

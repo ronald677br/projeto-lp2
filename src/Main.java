@@ -29,8 +29,5 @@ public class Main {
         tecnicoAdministrativo.lerDados("Neymar","Rua dos Brabo", "(54)3332-2222", "111.222.333-44", "00004", 15000);
         tecnicoAdministrativo.mostrarDados();
 
-
-
-
     }
 }

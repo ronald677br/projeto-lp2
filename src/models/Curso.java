@@ -2,11 +2,11 @@ package models;
 
 public class Curso {
 
-    String nome;
+    private String nome;
 
-    int codigo;
+    private int codigo;
 
-    String duracao;
+    private String duracao;
 
 	public void lerDados(String nome, int codigo, String duracao) {
 		this.nome = nome;

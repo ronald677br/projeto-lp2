@@ -2,16 +2,16 @@ package models;
 
 public class Funcionario {
 
-    String nome;
+    private String nome;
 
-    String endereco;
+    private String endereco;
 
-    String telefone;
+    private String telefone;
 
-    String cpf;
+    private String cpf;
 
-    String numCTPS;
+    private String numCTPS;
 
-    float salario;
+    private float salario;
 
 }

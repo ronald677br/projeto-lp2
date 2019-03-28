@@ -2,9 +2,9 @@ package models;
 
 public class Professor extends Funcionario {
 
-    String titulacao;
+    private String titulacao;
 
-    String areaPesquisa;
+    private String areaPesquisa;
 
     public void lerDados(String nome, String endereco, String telefone, String cpf, String numCTPS, float salario, String titulacao, String areaPesquisa) {
 
