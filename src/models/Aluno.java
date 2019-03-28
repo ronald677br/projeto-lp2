@@ -9,7 +9,73 @@ public class Aluno {
     private String telefone;
 
 	private int codigoAluno;
-	
+
+
+	public String getNome() {
+
+		return nome;
+
+	}
+
+	public boolean setNome(String nome) {
+
+		if("".equals(nome)) {
+			return false;
+		}
+
+		this.nome = nome;
+		return true;
+	}
+
+	public String getEmail() {
+
+		return email;
+
+	}
+
+	public boolean setEmail() {
+
+		if("".equals(email)) {
+			return false;
+		}
+
+		this.email = email;
+		return true;
+
+	}
+
+	public String getTelefone() {
+
+		return telefone;
+
+	}
+
+	public boolean setTelefone() {
+
+		if("".equals(telefone)) {
+			return false;
+		}
+
+		this.telefone = telefone;
+		return true;
+
+	}
+
+	public int getCodigoAluno() {
+
+		return codigoAluno;
+	}
+
+	public void setCodigoAluno(int codigoAluno) {
+
+		if("".equals(codigoAluno)) {
+			return false;
+		}
+
+		this.codigoAluno = codigoAluno;
+		return true;
+	}
+
 	public void lerDados(String nome, String email, String telefone, int codigoAluno) {
 
 		this.nome = nome;
