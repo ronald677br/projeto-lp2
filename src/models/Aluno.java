@@ -66,7 +66,7 @@ public class Aluno {
 		return codigoAluno;
 	}
 
-	public void setCodigoAluno(int codigoAluno) {
+	public boolean setCodigoAluno(int codigoAluno) {
 
 		if("".equals(codigoAluno)) {
 			return false;
