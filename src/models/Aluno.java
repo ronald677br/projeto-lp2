@@ -10,6 +10,7 @@ public class Aluno {
 
 	private int codigoAluno;
 
+	private Byte situacao;
 
 	public String getNome() {
 
@@ -33,7 +34,7 @@ public class Aluno {
 
 	}
 
-	public boolean setEmail() {
+	public boolean setEmail(String email) {
 
 		if("".equals(email)) {
 			return false;
@@ -50,7 +51,7 @@ public class Aluno {
 
 	}
 
-	public boolean setTelefone() {
+	public boolean setTelefone(String telefone) {
 
 		if("".equals(telefone)) {
 			return false;
@@ -68,7 +69,7 @@ public class Aluno {
 
 	public boolean setCodigoAluno(int codigoAluno) {
 
-		if("".equals(codigoAluno)) {
+		if (codigoAluno == 0) {
 			return false;
 		}
 
@@ -94,5 +95,35 @@ public class Aluno {
 		out += " \nCódigo do Aluno: " + this.codigoAluno;
 		System.out.println(out);
 
+	}
+
+	public boolean setSituacao(Character situacao) {
+		switch (situacao) {
+			case 'M':
+				this.situacao = 1;
+				break;
+			case 'T':
+				this.situacao = 2;
+				break;
+			case 'D':
+				this.situacao = 3;
+				break;
+			default:
+				return false;
+		}
+		return true;
+	}
+
+	public Character getSituacao() {
+		switch (situacao) {
+			case 1:
+				return 'M';
+			case 2:
+				return 'T';
+			case 3:
+				return 'D';
+			default:
+				return false;
+		}
 	}
 }

@@ -1,5 +1,7 @@
 package models;
 
+import validators.CPFValidate;
+
 public class Funcionario {
 
     private String nome;
@@ -34,14 +36,6 @@ public class Funcionario {
         return true;
     }
 
-    public boolean setNome(String nome) {
-        if ("".equals(nome)) {
-            return false;
-        }
-        this.nome = nome;
-        return true;
-    }
-
     public String getTelefone() {
         return telefone;
     }
@@ -59,18 +53,19 @@ public class Funcionario {
     }
 
     public boolean setCpf(String cpf) {
-        if ("".equals(cpf)) {
-            return false;
-        }
-        this.cpf= cpf;
-        return true;
+		if (CPFValidate.isCPF(cpf)) {
+			this.cpf = cpf;
+			return true;
+		}
+
+		return false;
     }
 
     public String getNumCTPS(String numCTPS) {
         return numCTPS;
     }
 
-    public boolean setNumCTPS(numCTPS) {
+    public boolean setNumCTPS(String numCTPS) {
         if ("".equals(numCTPS)) {
             return false;
         }
@@ -82,7 +77,7 @@ public class Funcionario {
         return salario;
     }
 
-    public boolean setSalario(String salario) {
+    public boolean setSalario(float salario) {
         if (salario < 0) {
             return false;
         }

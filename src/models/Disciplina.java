@@ -29,7 +29,7 @@ public class Disciplina {
 		return this.codigo = codigo;
 	}
 
-	public void getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
 
@@ -41,11 +41,11 @@ public class Disciplina {
 		return true;
 	}
 
-	public void getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void getDuracao() {
+	public String getDuracao() {
 		return duracao;
 	}
 
