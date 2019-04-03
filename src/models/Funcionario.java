@@ -2,6 +2,8 @@ package models;
 
 import validators.CPFValidate;
 
+import java.util.Scanner;
+
 public class Funcionario {
 
     private String nome;
@@ -16,11 +18,41 @@ public class Funcionario {
 
     private float salario;
 
+    protected void lerDados() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o nome:");
+        this.setNome(scanner.nextLine());
+        System.out.println("Digite o endereço:");
+
+        this.setEndereco(scanner.nextLine());
+        System.out.println("Digite o telefone:");
+
+        this.setTelefone(scanner.nextLine());
+
+        System.out.println("Digite o CPF:");
+        while (!this.setCpf(scanner.nextLine())) {
+            System.out.println("Digite o CPF:");
+        }
+
+
+        System.out.println("Digite o CTPS:");
+
+        this.setNumCTPS(scanner.nextLine());
+        System.out.println("Digite o Salário:");
+
+        this.setSalario(scanner.nextFloat());
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public boolean setNome(String nome) {
         if ("".equals(nome)) {
             return false;
         }
-        this.codigo = codigo;
+        this.nome = nome;
         return true;
     }
 
@@ -61,7 +93,7 @@ public class Funcionario {
 		return false;
     }
 
-    public String getNumCTPS(String numCTPS) {
+    public String getNumCTPS() {
         return numCTPS;
     }
 
@@ -73,7 +105,7 @@ public class Funcionario {
         return true;
     }
 
-    public String getSalario() {
+    public float getSalario() {
         return salario;
     }
 

@@ -1,22 +1,20 @@
 package models;
 
+import java.util.Scanner;
+
 public class TecnicoAdministrativo extends Funcionario {
 
-	public void lerDados(String nome, String endereco, String telefone, String cpf, String numCTPS, float salario) {
-		this.nome = nome;
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.cpf = cpf;
-		this.numCTPS = numCTPS;
-		this.salario = salario;
+	public void lerDadosTecnico() {
+		System.out.println("Cadastro do tecnico:");
 
+		this.lerDados();
 	}
 
 	public void mostrarDados() {
 
 		System.out.println("-------Técnico Administrativo-------");
-		System.out.println("Nome: " + this.nome + "\nEndereço: " + this.endereco +
-				"\nTelefone: " + this.telefone + "\nCPF: " + this.cpf +
-				"\nnumCTPS: " + this.numCTPS + "\nSalário: " + this.salario);
+		System.out.println("Nome: " + this.getNome() + "\nEndereço: " + this.getEndereco() +
+				"\nTelefone: " + this.getTelefone() + "\nCPF: " + this.getCpf() +
+				"\nnumCTPS: " + this.getNumCTPS() + "\nSalário: " + this.getSalario());
 	}
 }

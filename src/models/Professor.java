@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Scanner;
+
 public class Professor extends Funcionario {
 
     private String titulacao;
@@ -12,7 +14,7 @@ public class Professor extends Funcionario {
 
     }
 
-    public boolean setTitulacao() {
+    public boolean setTitulacao(String titulacao) {
 
         if("".equals(titulacao)) {
             return false;
@@ -40,26 +42,25 @@ public class Professor extends Funcionario {
 
     }
 
-    public void lerDados(String nome, String endereco, String telefone, String cpf, String numCTPS, float salario, String titulacao, String areaPesquisa) {
+    public void lerDadosProf() {
 
-        this.nome = nome;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.cpf = cpf;
-        this.numCTPS = numCTPS;
-        this.salario = salario;
-        this.titulacao = titulacao;
-        this.areaPesquisa = areaPesquisa;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Cadastro do professor:");
+        this.lerDados();
+        System.out.println("Digite a titulação:");
+        this.setTitulacao(scanner.nextLine());
+        System.out.println("Digite a área de pesquisa:");
+        this.setAreaPesquisa(scanner.nextLine());
 
     }
 
     public void mostrarDados() {
 
         System.out.println("-------Professor-------");
-        System.out.println("Nome: " + this.nome + "\nEndereço: " + this.endereco +
-                           "\nTelefone: " + this.telefone + "\nCPF: " + this.cpf +
-                           "\nnumCTPS: " + this.numCTPS + "\nSalário: " + this.salario +
-                           "\nTitulação: " + this.titulacao + "\nAreá de Pesquisa: " + this.areaPesquisa);
+        System.out.println("Nome: " + this.getNome() + "\nEndereço: " + this.getEndereco() +
+                           "\nTelefone: " + this.getTelefone() + "\nCPF: " + this.getCpf() +
+                           "\nnumCTPS: " + this.getNumCTPS() + "\nSalário: " + this.getSalario() +
+                           "\nTitulação: " + this.getTitulacao() + "\nAreá de Pesquisa: " + this.getAreaPesquisa());
 
     }
 

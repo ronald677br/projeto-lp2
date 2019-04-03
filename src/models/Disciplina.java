@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Scanner;
+
 public class Disciplina {
 
     private int codigo;
@@ -8,17 +10,25 @@ public class Disciplina {
 
 	private String duracao;
 
-	public void lerDados(int codigo, String nome, String duracao) {
-		this.codigo = codigo;
-		this.nome = nome;
-		this.duracao = duracao;
+	public void lerDados() {
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Cadastro da disciplina:");
+        System.out.println("Digite o codigo:");
+		this.setCodigo(scanner.nextInt());
+
+		System.out.println("Digite o nome:");
+		this.setNome(scanner.nextLine());
+
+		System.out.println("Digite a duracao:");
+		this.setDuracao(scanner.nextLine());
 	}
 
 	public void mostrarDados() {
 		System.out.println("-------Disciplina-------");
-		String out = "Nome: " + this.nome;
-		out += " \nCódigo: " + this.codigo;
-		out += " \nDuração: " + this.duracao;
+		String out = "Nome: " + this.getNome();
+		out += " \nCódigo: " + this.getDuracao();
+		out += " \nDuração: " + this.getDuracao();
 		System.out.println(out);
 	}
 
@@ -26,10 +36,11 @@ public class Disciplina {
 		if (codigo < 0) {
 			return false;
 		}
-		return this.codigo = codigo;
+		this.codigo = codigo;
+		return true;
 	}
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
