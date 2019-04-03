@@ -20,11 +20,9 @@ public class Curso {
 		System.out.println("Digite o codigo:");
 		this.setCodigo(scanner.nextInt());
 
+		scanner.nextLine();
 		System.out.println("Digite a duracao:");
-
-		Scanner x = new Scanner(System.in);
-		String teste = x.nextLine();
-		this.setDuracao(teste);
+		this.setDuracao(scanner.nextLine());
 	}
 
 	public void mostrarDados() {

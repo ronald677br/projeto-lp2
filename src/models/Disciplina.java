@@ -17,6 +17,7 @@ public class Disciplina {
         System.out.println("Digite o codigo:");
 		this.setCodigo(scanner.nextInt());
 
+		scanner.nextLine();
 		System.out.println("Digite o nome:");
 		this.setNome(scanner.nextLine());
 

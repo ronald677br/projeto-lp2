@@ -39,7 +39,7 @@ public class Funcionario {
         System.out.println("Digite o CTPS:");
 
         this.setNumCTPS(scanner.nextLine());
-        System.out.println("Digite o Salário:");
+        System.out.println("Digite o salário:");
 
         this.setSalario(scanner.nextFloat());
     }
