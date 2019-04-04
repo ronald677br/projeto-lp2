@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Professor extends Funcionario {
@@ -8,7 +9,18 @@ public class Professor extends Funcionario {
 
     private String areaPesquisa;
 
-    public String getTitulacao() {
+	private ArrayList<Disciplina> disciplinas;
+
+	public addDisciplina(int codigo, String nome, String duracao) {
+		Disciplina disciplina = new Disciplina();
+		disciplina.setCodigo(codigo);
+		disciplina.setNome(nome);
+		disciplina.setDuracao(duracao);
+
+		disciplinas.add(disciplina);
+	}
+
+	public String getTitulacao() {
 
         return titulacao;
 
