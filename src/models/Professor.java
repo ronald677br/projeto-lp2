@@ -5,13 +5,21 @@ import java.util.Scanner;
 
 public class Professor extends Funcionario {
 
+	private float valorHoraAula;
+
+	private int numeroHorasAula;
+
     private String titulacao;
 
     private String areaPesquisa;
 
 	private ArrayList<Disciplina> disciplinas;
 
-	public addDisciplina(int codigo, String nome, String duracao) {
+	public float calcularSalario() {
+		return numeroHorasAula * valorHoraAula;
+	}
+
+	public void addDisciplina(int codigo, String nome, String duracao) {
 		Disciplina disciplina = new Disciplina();
 		disciplina.setCodigo(codigo);
 		disciplina.setNome(nome);
@@ -63,7 +71,7 @@ public class Professor extends Funcionario {
         this.setTitulacao(scanner.nextLine());
         System.out.println("Digite a área de pesquisa:");
         this.setAreaPesquisa(scanner.nextLine());
-
+		scanner.close();
     }
 
     public void mostrarDados() {

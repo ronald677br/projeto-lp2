@@ -2,36 +2,48 @@ package models;
 
 import java.util.Scanner;
 
-public class Disciplina {
-
-    private int codigo;
-
-    private String nome;
-
-	private String duracao;
+public class CursoGraduacao extends Curso {
 
 	public void lerDados() {
 		Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Cadastro da disciplina:");
-        System.out.println("Digite o codigo:");
-		this.setCodigo(scanner.nextInt());
-
-		scanner.nextLine();
+		System.out.println("Cadastro do curso:");
 		System.out.println("Digite o nome:");
 		this.setNome(scanner.nextLine());
 
+		System.out.println("Digite o codigo:");
+		this.setCodigo(scanner.nextInt());
+
+		scanner.nextLine();
 		System.out.println("Digite a duracao:");
 		this.setDuracao(scanner.nextLine());
 		scanner.close();
 	}
 
 	public void mostrarDados() {
-		System.out.println("-------Disciplina-------");
+
+		System.out.println("-------Curso-------");
 		String out = "Nome: " + this.getNome();
-		out += " \nCódigo: " + this.getDuracao();
+		out += " \nCódigo: " + this.getCodigo();
 		out += " \nDuração: " + this.getDuracao();
 		System.out.println(out);
+
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public boolean setNome(String nome) {
+		if (nome.equals("")) {
+			return false;
+		}
+		this.nome = nome;
+		return true;
+	}
+
+	public int getCodigo() {
+		return codigo;
 	}
 
 	public boolean setCodigo(int codigo) {
@@ -42,28 +54,12 @@ public class Disciplina {
 		return true;
 	}
 
-	public int getCodigo() {
-		return codigo;
-	}
-
-	public boolean setNome(String nome) {
-		if ("".equals(nome)) {
-			return false;
-		}
-		this.nome = nome;
-		return true;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
 	public String getDuracao() {
 		return duracao;
 	}
 
 	public boolean setDuracao(String duracao) {
-		if ("".equals(duracao)) {
+		if (duracao.equals("")) {
 			return false;
 		}
 		this.duracao = duracao;

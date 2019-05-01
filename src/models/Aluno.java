@@ -1,123 +1,39 @@
 package models;
 
-import java.util.Scanner;
+public abstract class Aluno extends Pessoa {
 
-public class Aluno {
+	protected String nome;
 
-    private String nome;
+	protected String email;
 
-    private String email;
+	protected String telefone;
 
-    private String telefone;
+	protected int codigoAluno;
 
-	private int codigoAluno;
+	protected Byte situacao;
 
-	private Byte situacao;
+	public abstract String getNome();
 
-	public String getNome() {
-		return nome;
-	}
+	public abstract boolean setNome(String nome);
 
-	public boolean setNome(String nome) {
-		if("".equals(nome)) {
-			return false;
-		}
-		this.nome = nome;
-		return true;
-	}
+	public abstract String getEmail();
 
-	public String getEmail() {
-		return email;
-	}
+	public abstract boolean setEmail(String email);
 
-	public boolean setEmail(String email) {
-		if("".equals(email)) {
-			return false;
-		}
-		this.email = email;
-		return true;
-	}
+	public abstract String getTelefone();
 
-	public String getTelefone() {
-		return telefone;
-	}
+	public abstract boolean setTelefone(String telefone);
 
-	public boolean setTelefone(String telefone) {
-		if("".equals(telefone)) {
-			return false;
-		}
-		this.telefone = telefone;
-		return true;
-	}
+	public abstract int getCodigoAluno();
 
-	public int getCodigoAluno() {
-		return codigoAluno;
-	}
+	public abstract boolean setCodigoAluno(int codigoAluno);
 
-	public boolean setCodigoAluno(int codigoAluno) {
-		if (codigoAluno == 0) {
-			return false;
-		}
-		this.codigoAluno = codigoAluno;
-		return true;
-	}
+	public abstract void lerDados();
 
-	public void lerDados() {
-		Scanner scanner = new Scanner(System.in);
+	public abstract void mostrarDados();
 
-		System.out.println("Cadastro do aluno:");
-		System.out.println("Digite o nome:");
-		this.setNome(scanner.nextLine());
+	public abstract boolean setSituacao(Character situacao);
 
-		System.out.println("Digite o email:");
-		this.setEmail(scanner.nextLine());
+	public abstract Character getSituacao();
 
-		System.out.println("Digite o telefone:");
-		this.setTelefone(scanner.nextLine());
-
-		System.out.println("Digite o codigo:");
-		this.setCodigoAluno(scanner.nextInt());
-
-	}
-
-	public void mostrarDados() {
-
-		System.out.println("-------Aluno-------");
-		String out = "Nome: " + this.getNome();
-		out += " \nE-mail: " + this.getEmail();
-		out += " \nTelefone: " + this.getTelefone();
-		out += " \nCódigo do Aluno: " + this.getCodigoAluno();
-		System.out.println(out);
-
-	}
-
-	public boolean setSituacao(Character situacao) {
-		switch (situacao) {
-			case 'M':
-				this.situacao = 1;
-				break;
-			case 'T':
-				this.situacao = 2;
-				break;
-			case 'D':
-				this.situacao = 3;
-				break;
-			default:
-				return false;
-		}
-		return true;
-	}
-
-	public Character getSituacao() {
-		switch (situacao) {
-			case 1:
-				return 'M';
-			case 2:
-				return 'T';
-			case 3:
-				return 'D';
-			default:
-				return 'n';
-		}
-	}
 }

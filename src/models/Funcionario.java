@@ -4,7 +4,7 @@ import validators.CPFValidate;
 
 import java.util.Scanner;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nome;
 
@@ -18,7 +18,9 @@ public class Funcionario {
 
     private float salario;
 
-    protected void lerDados() {
+	public abstract float calcularSalario();
+
+	protected void lerDados() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite o nome:");
@@ -41,10 +43,11 @@ public class Funcionario {
         this.setNumCTPS(scanner.nextLine());
         System.out.println("Digite o salário:");
 
-        this.setSalario(scanner.nextFloat());
-    }
+		this.setSalario(scanner.nextFloat());
+		scanner.close();
+	}
 
-    public String getNome() {
+	public String getNome() {
         return nome;
     }
 

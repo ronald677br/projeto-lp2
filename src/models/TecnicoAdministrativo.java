@@ -1,13 +1,21 @@
 package models;
 
-import java.util.Scanner;
-
 public class TecnicoAdministrativo extends Funcionario {
+
+	private float valorHoraExtra;
+
+	private int numeroHoraExtra;
+
+	private float salarioBase;
 
 	public void lerDadosTecnico() {
 		System.out.println("Cadastro do tecnico:");
 
 		this.lerDados();
+	}
+
+	public float calcularSalario() {
+		return salarioBase + numeroHoraExtra * valorHoraExtra;
 	}
 
 	public void mostrarDados() {

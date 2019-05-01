@@ -7,12 +7,12 @@ public class Main {
 
         Scanner ler = new Scanner(System.in);
 
-        Aluno aluno = new Aluno();
+        AlunoGraduacao aluno = new AlunoGraduacao();
 
         aluno.lerDados();
         aluno.mostrarDados();
 
-        Curso curso = new Curso();
+        CursoGraduacao curso = new CursoGraduacao();
 
         curso.lerDados();
         curso.mostrarDados();
@@ -31,6 +31,6 @@ public class Main {
 
         tecnicoAdministrativo.lerDadosTecnico();
         tecnicoAdministrativo.mostrarDados();
-
+		ler.close();
     }
 }

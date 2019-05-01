@@ -2,57 +2,27 @@ package models;
 
 import java.util.Scanner;
 
-public class AlunoPosGraduacao extends Aluno {
+public class AlunoGraduacao {
 
-    private String graduacao;
+    private String nome;
 
-    private String instituicao;
+    private String email;
 
-    private String anoInicio;
+    private String telefone;
 
-    private String anoFinal;
+	private int codigoAluno;
 
-    private CursoPosGraduacao curso;
+	private Byte situacao;
 
-	public CursoPosGraduacao getCurso() {
+	private CursoGraduacao curso;
+
+	public CursoGraduacao getCurso() {
 		return curso;
 	}
 
 	public void setCurso() {
 		curso.lerDados();
 	}
-
-    public void setGraduacao(String graduacao) {
-        this.graduacao = graduacao;
-    }
-
-    public String getGraduacao() {
-        return graduacao;
-    }
-
-    public void setInstituicao(String instituicao) {
-        this.instituicao = instituicao;
-    }
-
-    public String getInstituicao() {
-        return instituicao;
-    }
-
-    public void setAnoInicio(String anoInicio) {
-        this.anoInicio = anoInicio;
-    }
-
-    public String getAnoInicio() {
-        return anoInicio;
-    }
-
-    public void setAnoFinal(String anoFinal) {
-        this.anoFinal = anoFinal;
-    }
-
-    public String getAnoFinal() {
-        return anoFinal;
-    }
 
 	public String getNome() {
 		return nome;
